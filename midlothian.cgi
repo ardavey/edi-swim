@@ -55,7 +55,7 @@ sub get_venues {
     $tree->parse_content( $mech->content );
     my $pdf_url = $tree->look_down(
       _tag => 'a',
-      href => qr/programme\.pdf/,
+      href => qr/pool_programme\.pdf/,
     )->attr_get_i( 'href' );
     
     push @venues, {
